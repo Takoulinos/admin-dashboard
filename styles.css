@@ -1,0 +1,291 @@
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: 75%;
+    margin: 0;
+    padding: 0;
+    max-height: fit-content;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+h4 {
+    font-size: 28px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h5 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    width: fit-content;
+}
+
+
+h6 {
+    font-size: 16px;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    width: 70px;
+}
+
+/*-------------------------sidebar----------------------------------*/
+
+.sidebar {
+    background-color: #2aa9f3;
+    color: white;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    padding: 25px;
+    z-index: 2;
+    gap: 35px;
+}
+
+.sidebar div {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar ul li {
+    font-weight: bold;
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+}
+
+/*--------------------------------header---------------------------------------*/
+
+.header {
+    background-color: rgb(255, 255, 255);
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: minmax(320px, 2fr) 1fr;
+    grid-template-rows: 1fr 2fr;
+    padding-top: 35px;
+    padding-left: 35px;
+    padding-right: 60px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+#searchbar {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+}
+
+#searchbar input {
+    border-radius: 15px;
+    border: 1px solid #d6d9dc;
+    background-color: rgb(234, 234, 234);
+    height: 30px;
+    max-width: 550px;
+    min-width: 100px;
+    line-height: 2rem;
+    padding: 15px;
+    align-self: center;
+}
+
+#searchbar svg {
+    align-self: center;
+}
+
+#icons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: fit-content;
+}
+
+#icons div {
+    font-size:  large;
+    font-weight: bold;
+}
+
+#icons img {
+    width: 45px;
+}
+
+.user-info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3px 15px;
+    font-weight: bold;
+}
+
+.user-info img {
+    grid-row: 1 / 3;
+    width: 80px;
+    align-self: center;
+}
+
+.user-info #greeting {
+    font-size: medium;
+    align-self: flex-end;
+}
+
+.user-info #username {
+    font-size: x-large;
+    align-self: flex-start;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    padding-right: 35px;
+    font-size: 19px;
+    width: fit-content;
+}
+
+button {
+    color: white;
+    background-color: #2aa9f3;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    width: 90px;
+    height: 35px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/*--------------------------main content------------------------------*/
+
+.main-content {
+    padding-right: 60px;
+    padding-left: 60px;
+    background-color: rgb(234, 234, 234);
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+
+.main-content #your-projects  {
+    grid-row: 1/3;
+}
+
+.main-content #your-projects .container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.main-content #your-projects .container .project {
+    padding: 15px;
+    border-radius: 10px;
+    font-size: large;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    border-left: 11px solid rgb(206, 186, 72);
+}
+
+.main-content #your-projects .container .project h5:hover {
+border-bottom: 1px solid black;
+}
+
+.main-content #announcements {
+    grid-row: 1/2;
+    font-size: small;;
+}
+
+.main-content #announcements .container {
+    border-radius: 10px;
+    padding: 5% 15%;
+    display: grid;
+    height: fit-content;
+}
+
+.main-content #announcements .container div {
+    padding-bottom: 15px;
+    margin-top: 15px;
+}
+
+.main-content #announcements .container div:nth-last-child(n+2) {
+    border-bottom: 1px solid rgba(182, 172, 172, 0.7);
+}
+
+.main-content #trending {
+    grid-row: 2/3;
+}
+
+.main-content #trending .container {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.main-content #trending .container div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+}
+
+.main-content #trending .container div img {
+    grid-row: 1/3;
+    width: 50px;
+    align-self: flex-end;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.main-content #trending .container div .user {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 4px ;
+}
+
+.main-content #trending .container div .title {
+    color: grey;
+}
+
+.main-content #your-projects .container div,
+.main-content #announcements .container,
+.main-content #trending .container {
+    background-color: white;
+}
